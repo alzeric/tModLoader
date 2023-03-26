@@ -30,7 +30,7 @@ namespace Terraria.ModLoader.Engine
 			if (Platform.IsWindows) {
 				steamAPIPath = "steam_api.dll";
 				steamAPIHash = ToByteArray("7B857C897BC69313E4936DC3DCCE5193");
-				gogHash = ToByteArray("ff61b96a07894a9e65f880fb9608fb37"); // Don't forget to update CheckExe in CheckGoG
+				gogHash = ToByteArray("efccd835e6b54697e05e8a4b72d935cd"); // Don't forget to update CheckExe in CheckGoG
 				steamHash = ToByteArray("4fd8072ca82ded3d9da1be577a478788");
 			}
 			else if (Platform.IsOSX) {
@@ -122,7 +122,7 @@ namespace Terraria.ModLoader.Engine
 			IsGoG = true;
 
 			const string DefaultExe = "Terraria.exe";
-			string CheckExe = $"Terraria_1.4.2.1.exe"; // This should match the hashes. {Main.versionNumber}
+			string CheckExe = $"Terraria_1.4.4.9.exe"; // This should match the hashes. {Main.versionNumber}
 			string vanillaPath = File.Exists(CheckExe) ? CheckExe : DefaultExe;
 
 			// If .exe not present, check Terraria directory (Side-by-Side Manual Install)
